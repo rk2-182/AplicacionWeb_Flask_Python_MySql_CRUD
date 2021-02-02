@@ -1,0 +1,31 @@
+*{
+    text-decoration: none;
+}
+
+
+#contenedor-general{
+    border: 1px solid black;
+    width: 80%;
+    margin: 0px auto;
+    padding: 1%;
+}
+
+.logo{
+    width: 90px;
+}
+
+.python{
+    width: 500px;
+    margin-left: 300px;
+}
+footer{
+    background-color: crimson;
+    height: 90px;
+}
+
+footer p{
+    margin-top: 5px;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+}

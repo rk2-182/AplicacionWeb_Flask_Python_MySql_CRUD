@@ -1,0 +1,91 @@
+/******************NAVEGACION****************************/
+  <header>
+                <h1>CRUD 1.0</h1>
+                <nav>
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="{{url_for('mostrar')}}">Mostrar</a></li>
+                        <li><a href="#">Actualizar</a></li>
+                        <li><a href="{{url_for('insertar')}}">Insertar</a></li>
+                        <li><a href="#">Eliminar</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+/******************TABLA**********************************/  
+   <hr>
+    <h2>Mostrando registros </h2>
+    <table border="1">
+        <tr>
+            <!--cabecera-->
+            <th>ID</th>
+
+            <th>Email</th>
+
+            <th>Usuario</th>
+
+            <th>Edad</th>
+
+        </tr>
+        {% for i in mostrar_datos%}
+        <!--tr = fila-->
+        <tr>
+            <!--td = celda-->
+            <td>{{i[0]}}</td>
+
+            <td>{{i[1]}}</td>
+
+            <td>{{i[2]}}</td>
+
+            <td>{{i[3]}}</td>
+
+        </tr>
+        {% endfor%}
+    </table>
+
+/********************FORMULARIO*************************************/
+<form method="POST" action="{{url_for('insertar')}}">
+    <label>Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input name="email" type="email"/>
+    <br><br>
+    <label>Username</label>
+    <input name="username" type="text"/>
+    <br><br>
+    <label>Age</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input name="edad" type="number"/>
+    <br><br>
+    <input type="submit" value="Guardar" />
+</form>
+
+
+https://icon-icons.com/es/
+
+https://getbootstrap.com/docs/5.0/components/navbar/
+
+https://www.anerbarrena.com/atributo-required-html5-4798/
+
+comandos git:
+git init: crear repositorio en el directorio del proyecto(se crea una carpeta oculta)
+git status -s: El comando git status muestra el estado del directorio de trabajo y del área del entorno de ensayo.
+git add: agregar archivo para seguimiento.
+git add .: agregar todos los archivos.
+git commit -m "descripción proyecto": guardar los cambios de los archivos en el repositorio.
+git log --oneline: ver lista de las copias respaldadas en el repositorio.
+git reset --hard "codigo": restaurar archivo a la instantanea que deseas por codigo.
+
+git push origin master: mostrar login luego de ingresar la url de git desde un repositorio existente local
+
+/*******************Subitr proyecto local******************************/
+git init
+
+git add .
+
+git commit -m "first commit"
+
+git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git
+
+git push -u origin master
+
+
+nombre del repositorio actual:https://github.com/rk2-182/AplicacionWeb_Flask_Python_MySql_CRUD.git
+

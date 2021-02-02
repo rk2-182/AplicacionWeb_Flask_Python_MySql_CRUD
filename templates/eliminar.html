@@ -1,0 +1,15 @@
+{%extends 'layout.html'%}
+
+{% block content%}
+<h2>Eliminar Registro</h2>
+<hr>
+<form method="POST" action="{{ url_for('eliminar')}}">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">ID</label>
+        <input name="id" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Eliminar</button>
+</form>
+
+{% endblock%}
